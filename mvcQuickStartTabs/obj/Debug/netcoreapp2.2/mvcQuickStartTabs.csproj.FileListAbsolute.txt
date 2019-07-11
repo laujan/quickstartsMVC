@@ -25,3 +25,4 @@ C:\Users\v-laujan\3_msteams-test-dotnet\mvcQuickstartTab\mvcQuickStartTabs\obj\D
 C:\Users\v-laujan\3_msteams-test-dotnet\mvcQuickstartTab\mvcQuickStartTabs\obj\Debug\netcoreapp2.2\Razor\Views\ChannelGroup\ChannelGroup.g.cshtml.cs
 C:\Users\v-laujan\3_msteams-test-dotnet\mvcQuickstartTab\mvcQuickStartTabs\obj\Debug\netcoreapp2.2\Razor\Views\Privacy\Privacy.g.cshtml.cs
 C:\Users\v-laujan\3_msteams-test-dotnet\mvcQuickstartTab\mvcQuickStartTabs\obj\Debug\netcoreapp2.2\Razor\Views\Tou\Tou.g.cshtml.cs
+C:\Users\v-laujan\3_msteams-test-dotnet\mvcQuickstartTab\mvcQuickStartTabs\obj\Debug\netcoreapp2.2\Razor\Views\PersonalTab\PersonalTab.g.cshtml.cs
