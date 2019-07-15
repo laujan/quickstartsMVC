@@ -14,6 +14,7 @@ namespace mvcQuickStartTabs.Controllers
         [Route("")]
         public IActionResult Privacy()
         {
+            ViewBag.Message = "Add your privacy statement here...";
             return View();
         }
     }

@@ -4,38 +4,36 @@
     Layout = "_Layout";
 }
 
-    <head>
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-        <script src='https://statics.teams.microsoft.com/sdk/v1.4.3/js/MicrosoftTeams.min.js'></script>
-    </head>
+
 <script>
     microsoftTeams.initialize();
 </script>
 
 <script>
-    let saveRed = () => {
-        microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-            microsoftTeams.settings.setSettings({
-                websiteUrl: "https://f79cb79e.ngrok.io",
-                contentUrl: "https://f79cb79e.ngrok.io/red/",
-                entityId: "tabby",
-                suggestedDisplayName: "tabby"
-            });
-            saveEvent.notifySuccess();
-        });
-    }
-
     let saveGray = () => {
         microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
             microsoftTeams.settings.setSettings({
                 websiteUrl: "https://f79cb79e.ngrok.io",
                 contentUrl: "https://f79cb79e.ngrok.io/gray/",
-                entityId: "tabby",
-                suggestedDisplayName: "tabby"
+                entityId: "grayIconTab",
+                suggestedDisplayName: "MyNewTab"
             });
             saveEvent.notifySuccess();
         });
     }
+
+    let saveRed = () => {
+        microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+            microsoftTeams.settings.setSettings({
+                websiteUrl: "https://f79cb79e.ngrok.io",
+                contentUrl: "https://f79cb79e.ngrok.io/red/",
+                entityId: "redIconTab",
+                suggestedDisplayName: "MyNewTab"
+            });
+            saveEvent.notifySuccess();
+        });
+    }
+
 </script>
 
 @{
@@ -43,18 +41,13 @@
         <div style="display:table-row">
             <div style="width: auto; display:table-cell;">
 
-                @{
-                    mvcQuickStartTabs.Models.ChannelGroup gray = new mvcQuickStartTabs.Models.ChannelGroup ();
-                    string g = ($"{@gray.GetColor()} gray!'");
-                    <div id="gray" style="display:none;">@g</div>
-                }
+                <div id="gray" style="display:none;">@ViewBag.Gray</div>
+
             </div>
 
             <div style="display: table-cell">
-                @{ mvcQuickStartTabs.Models.ChannelGroup  red = new mvcQuickStartTabs.Models.ChannelGroup ();
-                    string r = ($"{@red.GetColor()} red!'");
-                    <div id="red" style="display:none;">@r</div>
-                }
+
+                <div id="red" style="display:none;">@ViewBag.Red</div>
 
             </div>
 
@@ -82,13 +75,13 @@
 </script>
 
 <p>
-    <h2 style="color:#6364a5">Configure your tab:</h2style="color:#6364a5">
+    <h2 style="color:#6364a5">Configure your tab:</h2>
     <br />
     <br />
 </p>
 
-<button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
+<button onclick="(document.getElementById('icon').src='/images/iconGray.png'); colorClickGray()">Select Gray</button>
 
-<img id="icon" src="/images/teamsLogo.png" alt="icon" style="width:100px" />
+<img id="icon" src="~/images/teamsIcon.png" alt="icon" style="width:100px" />
 
-<button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
+<button onclick="(document.getElementById('icon').src='/images/iconRed.png'); colorClickRed()">Select Red</button>

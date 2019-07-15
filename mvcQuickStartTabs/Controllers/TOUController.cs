@@ -12,6 +12,7 @@ namespace mvcQuickStartTabs.Controllers
         [Route("")]
         public IActionResult Tou()
         {
+            ViewBag.Message = "Add your Terms of Use statement here...";
             return View();
         }
     }   

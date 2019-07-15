@@ -15,7 +15,9 @@ namespace mvcQuickStartTabs.Controllers
         [Route("")]
         public IActionResult ChannelGroup()
         {
-           
+            ChannelGroup color = new ChannelGroup();
+            ViewBag.Gray = ($"{color.GetColor()} gray!'");
+            ViewBag.Red = ($"{color.GetColor()} red!'");
             return View();
         }
     }
