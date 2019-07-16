@@ -33,9 +33,9 @@ namespace mvcQuickStartTabs
                 routes.MapRoute("Default", "{controller=Home}/{action=Index}/{Id?}"
             );
 
-        });
+            });
 
             app.UseFileServer();
         }
-}
+    }
 }
